@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Code</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #3498db;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Random Code</h1>
+    <div class="box">Hello!</div>
+    <button onclick="changeColor()">Change Color</button>
+
+    <script>
+        function changeColor() {
+            const box = document.querySelector('.box');
+            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            box.style.backgroundColor = randomColor;
+        }
+    </script>
+</body>
+</html>
